@@ -1,6 +1,6 @@
 #!/bin/bash
 MYIP=$(curl -sS ipv4.icanhazip.com)
-url_izin="https://raw.githubusercontent.com/zhets/izinsc/main/ip"
+url_izin="https://raw.githubusercontent.com/AriSaputra1205/izin/main/ip"
 username=$(curl -sS ${url_izin} | grep $MYIP | awk '{print $2}')
 valid=$(curl -sS ${url_izin} | grep $MYIP | awk '{print $3}')
 d1=$(date -d "$valid" +%s)
@@ -74,7 +74,7 @@ ungu='\033[0;35m'
 w='\033[1;96m'
 clear
 lane_atas
-echo -e " ${blue}│ \e[1;92;41m                XDXL STORE TUNNELING              ${NC}${blue} │${NC}"
+echo -e " ${blue}│ \e[1;92;41m                ZEXX STORE TUNNELING              ${NC}${blue} │${NC}"
 lane_bawah
 lane_atas
 echo -e " ${blue}│${NC} OS            ${NC}:  "`hostnamectl | grep "Operating System" | cut -d ' ' -f5-`
@@ -118,7 +118,7 @@ case $opt in
 4|04) clear ; menu-backup ;;
 5|05) clear ; menu-set ;;
 6|06) clear ; running ;;
-7|07) clear ; wget -q https://raw.githubusercontent.com/zhets/sc/update.sh && chmod +x update.sh && ./update.sh ;;
+7|07) clear ; wget -q https://raw.githubusercontent.com/AriSaputra1205/zexx/update.sh && chmod +x update.sh && ./update.sh ;;
 8|08) clear ; cat /etc/log-create-user.log ; read -p "Press [ Enter ] For Back To Menu" ;;
 *) menu ;;
 esac
