@@ -31,7 +31,7 @@ checking_sc
 z="\033[1;93m"
 x="\033[0m"
 clear
-Domain=$(cat /etc/xray/domain )
+Domain=$(cat /etc/xray/domain)"
 hostslow=$( cat /etc/xray/dns )
 serverpub=$( cat /etc/slowdns/server.pub )
 
@@ -43,7 +43,7 @@ read -p "Password       : " Pass
 read -p "Limit IP       : " limitip
 read -p "Expired (Days) : " expired
 useradd -e `date -d "$expired days" +"%Y-%m-%d"` -s /bin/false -M $Login
-exp="$(chage -l $Login | grep "Account expired" | awk -F": " '{print $2}')"
+exp="$(chage -l $Login | grep "Account expires" | awk -F": " '{print $2}')"
 echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
 hari-ini=`date -d "0 days" +"%Y-%m-%d"`
 echo "${limitip}" > /etc/xray/limit/ssh/ip/${user}
