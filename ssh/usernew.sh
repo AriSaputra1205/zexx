@@ -31,7 +31,7 @@ checking_sc
 z="\033[1;93m"
 x="\033[0m"
 clear
-Domain=$(cat /etc/xray/domain)"
+Domain=$(cat /etc/xray/domain )
 hostslow=$( cat /etc/xray/dns )
 serverpub=$( cat /etc/slowdns/server.pub )
 
