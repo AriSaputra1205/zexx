@@ -87,7 +87,7 @@ echo -e " ${blue}│${NC} DOMAIN        ${NC}:  $(cat /etc/xray/domain)"
 echo -e " ${blue}│${NC} UPTIME        ${NC}:  $uptime"
 lane_bawah
 lane_atas
-echo -e " ${z}│${b} SSH-WS$NC : $status_ssh ${z}│$b NGINX$NC : $status_nginx ${z}│$b XRAY$NC : $status_xray ${z}│$b   DONE   ${z}│$NC" 
+echo -e " ${z}│${b} SSH-WS$NC :$status_ssh ${z}│$b NGINX$NC :$status_nginx ${z}│$b XRAY$NC :$status_xray ${z}│$b   DONE   ${z}│$NC" 
 lane_bawah
 echo -e "       ╭─────────────────────────────────────────╮" | lolcat
 echo -e "                    ${g} TOTAL ACCOUNTS ${NC}"
